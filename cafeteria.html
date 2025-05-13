@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+   <head>
+	   <meta charset="utf-8">
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+	   <title>Cafeteria Dani </title>
+        
+	<!--Configuracion de estilos de las etiquetas de la página-->
+  
+   	  <style>
+  html, body {
+    background-image: url('fondo.jpeg'); 
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      
+    }
+ 
+      body {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #333;
+      
+      background-color: #fdf6f0;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .contenido {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 1px 1px 5px black;
+    }
+
+    header {
+      background-color: #8b4513;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo 
+    {
+      width: 150px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .titulo {
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    nav {
+      background-color: #f3e1d3;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #8b1313;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+  color: #6b3c11;
+  text-decoration: underline;
+}
+ 
+.imagen {
+  text-align: center;
+}
+
+
+    section {
+      padding: 40px;
+      background-color: white;
+      border: 1px solid #ddd;
+      margin: 20px auto;
+      width: 95%;
+      max-width: 1200px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .seccion-img {
+      width: 150px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #ffe4c4;
+    }
+
+    td img {
+      width: 80px;
+      border-radius: 5px;
+    }
+
+    .volver {
+      margin-top: 10px;
+      text-align: right;
+    }
+
+    .volver a {
+      color: #8b4513;
+      text-decoration: underline;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      color: #777;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    .sobre-nosotros {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .sobre-nosotros .texto {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .sobre-nosotros .imagen {
+      flex: 0 0 150px;
+      text-align: center;
+    }
+
+    /* Estilos para el formulario de satisfacción */
+    #formulario-satisfaccion {
+      background-color: #f9efe6;
+      border: 1px solid #d9c0a5;
+    }
+
+    #formulario-satisfaccion h2 {
+      color: #8b4513;
+      border-bottom: 2px solid #d9c0a5;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .grupo-formulario {
+      margin-bottom: 20px;
+    }
+
+    .grupo-formulario label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #6b3c11;
+    }
+
+    .estrellas {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+
+    .estrellas input {
+      display: none;
+    }
+
+    .estrellas label {
+      cursor: pointer;
+      font-size: 25px;
+      color: #ccc;
+      margin-right: 5px;
+    }
+
+    .estrellas label:hover,
+    .estrellas label:hover ~ label,
+    .estrellas input:checked ~ label {
+      color: #ffcc00;
+    }
+
+    textarea, 
+    input[type="text"], 
+    input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #d9c0a5;
+      border-radius: 6px;
+      background-color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    button[type="submit"] {
+      background-color: #8b4513;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #6b3c11;
+    }
+
+    button[type="reset"] {
+      background-color: #8b4513;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    button[type="reset"]:hover {
+      background-color: #6b3c11;
+    }
+
+    .form-required {
+      color: #d9534f;
+    }
+    
+  </style>
+ </head>
+
+    <!--Encabezado de la página-->
+    <body>
+      <div class="fondo">
+
+        <header id="Inicio">
+  
+          <div class="título" style="width: 100%; text-align: center;">
+            <h1 style="width: 100%; text-align: center;">LA CAFETERIA DANI</h1>
+            <p style="width: 100%; text-align: center;">!Bienvenidos a nuestra página web!.</p>
+          </div>
+  
+        </header>
+  
+        <nav>
+          <a href="#Inicio"><strong>Inicio</strong></a>
+          <a href="#Menu"><strong>Menú</strong></a>
+          <a href="#Beneficio"><strong>Beneficio</strong></a>
+          <a href="#Testimonio"><strong>Testimonio</strong></a>
+          <a href="#Promociones"><strong>Promociones</strong></a>
+          <a href="#Contacto"><strong>Contacto</strong></a>
+          <a href="#Satisfaccion"><strong>Tu Opinión</strong></a>
+        </nav>
+  
+        <!--Section Introduccion-->
+        <section id="Inicio" class="sobre-nosotros"> 
+                <div class="texto">
+                  <header>
+                      <h2>Sobre Nosotros</h2>  
+                  </header> 
+                    <p>La Cafeteria Dani es un lugar acogedor, donde puedes disfrutar del mejor café artesanal, acompañado de productos frescos y atencion amable.</p>
+  
+                    <p>Nos encanta compartir momentos con nuestros clientes, y por eso te invitamos a conocer mas sobre nuestros productos y servicios.</p>
+                 </div>
+  
+                 <div class="imagen">
+                  <img src="1.jpeg" alt="Bienvenida" class="seccion-img" style="width: 150px; margin-left: 10px; height: 150px;">
+                  <div class="volver"><strong><a href="#Inicio">Regresar al inicio</a></strong></div>
+                </div>
+              </section>
+  
+              <section id="Menu">
+                <div>
+                  <header header {
+                    background-color: #8b4513;
+                    color: white;
+                    padding: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                  }>
+  
+                  <h2>Menú de Productos</h2>
+                </div>
+                 <p>Aquí encontraras nuestras bebidas más populares, todas elaboradas con ingredientes seleccionados y preparados al momento.</p>
+                 <table>
+                   <tr>
+                    <th>Imagen</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Descripción</th>
+                  </tr>
+                  <tr>
+                    <td><img src="2.jpeg" alt="Café Espresso"></td>
+                    <td>Espresso</td>
+                    <td>$5.000</td>
+                    <td>Un café fuerte y concentrado para los amantes de lo intenso.</td>
+                  </tr>
+                  <tr>
+                    <td><img src="3.jpeg" alt="Capuchino" style="height: 60px;"></td>
+                    <td>Capuchino</td>
+                    <td>$6.500</td>
+                    <td>Con espuma de leche y un toque de canela. ¡Delicioso!</td>
+                  </tr>
+                  <tr>
+                    <td><img src="4.jpeg" alt="Té de burbujas"></td>
+                    <td>Té de burbujas</td>
+                    <td>$8.600</td>
+                    <td>Infusión con burbujas dulces. ¡Sabor tropical en cada sorbo!</td>
+                  </tr>
+                </table>
+                  <div class="volver"><strong><a href="#Inicio">Regresar al incio</a></strong></div>
+                </section>
+  
+                <section id="Beneficio" class="sobre-nosotros">
+                  <div class="texto"><strong></strong>
+                    <div>
+                       <header header {
+                        background-color: #8b4513;
+                        color: white;
+                        padding: 20px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                       }>
+                       <h2>Beneficios de visitarnos</h2>
+                       </div>
+                       <ul>
+                       <li>Ambiente cálido y acogedor</li>
+                       <br>
+                       <li>Conexión de Wi-Fi gratuita</li>
+                       <br>
+                       <li>Música suave para relajarte</li>
+                       <br>
+                       <li>Zona de lectura y juegos de mesa</li>
+                       <br>
+                       <li>Atención amable y personalizada</li>
+                       </ul>
+                     </div>
+                     <div class="imagen">
+                     <img src="5.jpeg" alt="Beneficios" class="seccion-img" style="width: 150px; margin-left: 10px; height: 150px;">
+                     <div class="volver"><strong><a href="#Inicio">Regresar al inicio</a></strong></div>
+                   </div>
+                 </section>
+  
+                 <section id="Testimonio" class="sobre-nosotros">
+                    <div class="texto">
+                      <div>
+                        <header header {
+                          background-color: #8b4513;
+                          color: white;
+                          padding: 20px;
+                          display: flex;
+                          justify-content: space-between;
+                          align-items: center;
+                        }>
+                        <h2>Testimonio</h2>
+                      </div>
+                      <br>
+                      <p>"El mejor café de la ciudad. Siempre que paso por aquí me llevo una sonrisa y una bebida deliciosa." - <em>Andrea G. </em></p>
+                      <br>
+                      <p>"Amo el ambiente, es perfecto para estudiar o reunirme con amigos. " - <em>Carlos R. </em></p>
+                    
+                    </div>
+                    <div class="imagen">
+                      <img src="9.jpeg" alt="Testimonio" class="seccion-img" style="width: 150px; margin-left: 10px; height: 150px;">
+                      <div class="volver"><strong><a href="#Inicio">Regresar al inicio</a></strong></div>
+                      
+                  </section>
+  
+                  <section id="Promociones" class="sobre-nosotros">
+                     <div class="texto">
+                      <div>
+                        <header header {
+                          background-color: #8b4513;
+                          color: white;
+                          padding: 20px;
+                          display: flex;
+                          justify-content: space-between;
+                          align-items: center;
+                        }>
+                        <h2>Promociones del mes</h2>
+                      </div>
+                       <ul>
+                          <li> ☕ 2x1 en capuchinos todos los martes</li>
+                          <br>
+                          <li> 🍪 Combo café + galletas por $6.000 los viernes</li>
+                          <br>
+                          <li> 🎁Tarjeta de fidelidad: cada 10 cafes uno gratis</li>
+                          <br>
+                        </ul>
+                      </div>
+                       <div class="imagen">
+                         <img src="6.jpeg" alt="Promociones" class="seccion-img" style="width: 150px; margin-left: 10px; height: 150px;">
+                         <div class="volver"><strong><a href="#Inicio">Regresar al inicio</a></strong></div>
+                       </div>
+                    </section>
+  
+                    <section id="Contacto" class="sobre-nosotros">
+                      <div class="texto">
+                        <div>
+                          <header header {
+                            background-color: #8b4513;
+                            color: white;
+                            padding: 20px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                          }>
+                          <h2>Contáctanos</h2>
+                        </div>
+                        <ul>
+                          <li><strong>Dirección:</strong> Carrera 15 #8-22, centro</li>
+                          <li><strong>Horario:</strong>Lunes a sábado de 8:00 a.m a 6:00 p.m</li>
+                          <li><strong>Correo:</strong>contacto@cafeteriadani.com</li>
+                          <li><strong>Teléfono:</strong>+57 314 7826202</li>
+                          <li><strong>Instagram:</strong> @Caféteriadani</li>
+                        </ul>
+                      </div>
+                      <div class="imagen">
+                        <img src="7.jpeg" alt="Contacto" class="seccion-img" style="width: 150px; height: 150px; margin-left: 10px;">
+                         <div class="volver"><strong><a href="#Inicio">Regresar al inicio</a></strong></div>
+                      </div>
+                     </section>
+  
+                     <!-- Formulario de Satisfacción -->
+                     <section id="Satisfaccion" class="sobre-nosotros formulario-satisfaccion">
+                       <div class="texto">
+                        <div>
+                          <header header {
+                            background-color: #8b4513;
+                            color: white;
+                            padding: 20px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                          }>
+                          <h2>Tu opinión nos importa</h2>
+                        </div>
+                         <p>En Cafetería Dani nos esforzamos por brindar la mejor experiencia. ¡Ayúdanos a mejorar con tus comentarios!</p>
+                         
+                         <form id="form-satisfaccion" action="#" method="post">
+                           <div class="grupo-formulario">
+                             <label for="nombre">Nombre <span class="form-required">*</span></label>
+                             <input type="text" id="nombre" name="nombre" required>
+                           </div>
+                           
+                           <div class="grupo-formulario">
+                             <label for="email">Correo electrónico</label>
+                             <input type="email" id="email" name="email">
+                           </div>
+                           
+                           <div class="grupo-formulario">
+                             <label>¿Cómo calificas nuestra atención? <span class="form-required">*</span></label>
+                             <div class="estrellas">
+                               <input type="radio" id="star5-atencion" name="rating-atencion" value="5" required>
+                               <label for="star5-atencion">★</label>
+                               <input type="radio" id="star4-atencion" name="rating-atencion" value="4">
+                               <label for="star4-atencion">★</label>
+                               <input type="radio" id="star3-atencion" name="rating-atencion" value="3">
+                               <label for="star3-atencion">★</label>
+                               <input type="radio" id="star2-atencion" name="rating-atencion" value="2">
+                               <label for="star2-atencion">★</label>
+                               <input type="radio" id="star1-atencion" name="rating-atencion" value="1">
+                               <label for="star1-atencion">★</label>
+                             </div>
+                           </div>
+                           
+                           <div class="grupo-formulario">
+                             <label>¿Cómo calificas la calidad de nuestros productos? <span class="form-required">*</span></label>
+                             <div class="estrellas">
+                               <input type="radio" id="star5-producto" name="rating-producto" value="5" required>
+                               <label for="star5-producto">★</label>
+                               <input type="radio" id="star4-producto" name="rating-producto" value="4">
+                               <label for="star4-producto">★</label>
+                               <input type="radio" id="star3-producto" name="rating-producto" value="3">
+                               <label for="star3-producto">★</label>
+                               <input type="radio" id="star2-producto" name="rating-producto" value="2">
+                               <label for="star2-producto">★</label>
+                               <input type="radio" id="star1-producto" name="rating-producto" value="1">
+                               <label for="star1-producto">★</label>
+                             </div>
+                           </div>
+                           
+                           <div class="grupo-formulario">
+                             <label>¿Cómo calificas el ambiente del local? <span class="form-required">*</span></label>
+                             <div class="estrellas">
+                               <input type="radio" id="star5-ambiente" name="rating-ambiente" value="5" required>
+                               <label for="star5-ambiente">★</label>
+                               <input type="radio" id="star4-ambiente" name="rating-ambiente" value="4">
+                               <label for="star4-ambiente">★</label>
+                               <input type="radio" id="star3-ambiente" name="rating-ambiente" value="3">
+                               <label for="star3-ambiente">★</label>
+                               <input type="radio" id="star2-ambiente" name="rating-ambiente" value="2">
+                               <label for="star2-ambiente">★</label>
+                               <input type="radio" id="star1-ambiente" name="rating-ambiente" value="1">
+                               <label for="star1-ambiente">★</label>
+                             </div>
+                           </div>
+                           
+                           <div class="grupo-formulario">
+                             <label for="recomendaria">¿Qué tan probable es que nos recomiendes a un amigo? <span class="form-required">*</span></label>
+                             <div class="estrellas">
+                               <input type="radio" id="star5-recomendaria" name="rating-recomendaria" value="5" required>
+                               <label for="star5-recomendaria">★</label>
+                               <input type="radio" id="star4-recomendaria" name="rating-recomendaria" value="4">
+                               <label for="star4-recomendaria">★</label>
+                               <input type="radio" id="star3-recomendaria" name="rating-recomendaria" value="3">
+                               <label for="star3-recomendaria">★</label>
+                               <input type="radio" id="star2-recomendaria" name="rating-recomendaria" value="2">
+                               <label for="star2-recomendaria">★</label>
+                               <input type="radio" id="star1-recomendaria" name="rating-recomendaria" value="1">
+                               <label for="star1-recomendaria">★</label>
+                             </div>
+                           </div>
+                           
+                           <div class="grupo-formulario">
+                             <label for="comentario">¿Tienes algún comentario o sugerencia para mejorar?</label>
+                             <textarea id="comentario" name="comentario" rows="4"></textarea>
+                           </div>
+                           
+                           <div class="grupo-formulario">
+                             <label>¿Qué productos te gustaría que añadiéramos a nuestro menú?</label>
+                             <textarea id="sugerencia-menu" name="sugerencia-menu" rows="3"></textarea>
+                           </div>
+
+                           <button type="submit">Enviar mi opinión</button>
+                           <button type="reset">Limpiar</button>
+                         </form>
+                       </div>
+                       
+                       <div class="imagen">
+                         <img src="8.jpeg" alt="Tu opinión" class="seccion-img" style="width: 150px; margin-left: 10px; height: 150px;">
+                         <div class="volver"><strong><a href="#Inicio">Regresar al inicio</a></strong></div>
+                       </div>
+                     </section>
+  
+                     <footer>
+                       <p>&copy; 2025 La cafeteria Dani. Todos los derechos reservados.</p>
+                     </footer>
+                  </body>
+      </div>
+    	
+</html>
