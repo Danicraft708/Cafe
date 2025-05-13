@@ -14,9 +14,6 @@
       padding: 0;
       height: 100%;
       
-
-
-      
     }
  
       body {
@@ -231,6 +228,21 @@
       background-color: #6b3c11;
     }
 
+    button[type="reset"] {
+      background-color: #8b4513;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    button[type="reset"]:hover {
+      background-color: #6b3c11;
+    }
+
     .form-required {
       color: #d9534f;
     }
@@ -273,7 +285,7 @@
                  </div>
   
                  <div class="imagen">
-                  <img src="1.jpeg" alt="Bienvenida" class="seccion-img">
+                  <img src="1.jpeg" alt="Bienvenida" class="seccion-img" style="width: 150px; margin-left: 10px; height: 150px;">
                   <div class="volver"><strong><a href="#Inicio">Regresar al inicio</a></strong></div>
                 </div>
               </section>
@@ -306,7 +318,7 @@
                     <td>Un café fuerte y concentrado para los amantes de lo intenso.</td>
                   </tr>
                   <tr>
-                    <td><img src="3.jpeg" alt="Capuchino"></td>
+                    <td><img src="3.jpeg" alt="Capuchino" style="height: 60px;"></td>
                     <td>Capuchino</td>
                     <td>$6.500</td>
                     <td>Con espuma de leche y un toque de canela. ¡Delicioso!</td>
@@ -324,30 +336,30 @@
                 <section id="Beneficio" class="sobre-nosotros">
                   <div class="texto"><strong></strong>
                     <div>
-                      <header header {
+                       <header header {
                         background-color: #8b4513;
                         color: white;
                         padding: 20px;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
-                      }>
-                      <h2>Beneficios de visitarnos</h2>
-                    </div>
-                    <ul>
-                      <li>Ambiente cálido y acogedor</li>
-                      <br>
-                      <li>Conexión de Wi-Fi gratuita</li>
-                      <br>
-                      <li>Música suave para relajarte</li>
-                      <br>
-                      <li>Zona de lectura y juegos de mesa</li>
-                      <br>
-                      <li>Atención amable y personalizada</li>
-                      </ul>
-                   </div>
-                   <div class="imagen">
-                     <img src="5.jpeg" alt="Beneficios" class="seccion-img">
+                       }>
+                       <h2>Beneficios de visitarnos</h2>
+                       </div>
+                       <ul>
+                       <li>Ambiente cálido y acogedor</li>
+                       <br>
+                       <li>Conexión de Wi-Fi gratuita</li>
+                       <br>
+                       <li>Música suave para relajarte</li>
+                       <br>
+                       <li>Zona de lectura y juegos de mesa</li>
+                       <br>
+                       <li>Atención amable y personalizada</li>
+                       </ul>
+                     </div>
+                     <div class="imagen">
+                     <img src="5.jpeg" alt="Beneficios" class="seccion-img" style="width: 150px; margin-left: 10px; height: 150px;">
                      <div class="volver"><strong><a href="#Inicio">Regresar al inicio</a></strong></div>
                    </div>
                  </section>
@@ -369,10 +381,11 @@
                       <p>"El mejor café de la ciudad. Siempre que paso por aquí me llevo una sonrisa y una bebida deliciosa." - <em>Andrea G. </em></p>
                       <br>
                       <p>"Amo el ambiente, es perfecto para estudiar o reunirme con amigos. " - <em>Carlos R. </em></p>
-                      <div class="volver"><strong><a href="#inicio">Regresar al inicio</a></strong>
+                    
                     </div>
-                    </div>
-                    <div>
+                    <div class="imagen">
+                      <img src="9.jpeg" alt="Testimonio" class="seccion-img" style="width: 150px; margin-left: 10px; height: 150px;">
+                      <div class="volver"><strong><a href="#Inicio">Regresar al inicio</a></strong></div>
                       
                   </section>
   
@@ -399,8 +412,8 @@
                         </ul>
                       </div>
                        <div class="imagen">
-                         <img src="6.jpeg" alt="Promociones" class="seccion-img">
-                         <div class="volver"><strong><a href="#inicio">Regresar al inicio</a></strong></div>
+                         <img src="6.jpeg" alt="Promociones" class="seccion-img" style="width: 150px; margin-left: 10px; height: 150px;">
+                         <div class="volver"><strong><a href="#Inicio">Regresar al inicio</a></strong></div>
                        </div>
                     </section>
   
@@ -426,7 +439,7 @@
                         </ul>
                       </div>
                       <div class="imagen">
-                        <img src="7.jpeg" alt="Contacto" class="seccion-img">
+                        <img src="7.jpeg" alt="Contacto" class="seccion-img" style="width: 150px; height: 150px; margin-left: 10px;">
                          <div class="volver"><strong><a href="#Inicio">Regresar al inicio</a></strong></div>
                       </div>
                      </section>
@@ -531,13 +544,14 @@
                              <label>¿Qué productos te gustaría que añadiéramos a nuestro menú?</label>
                              <textarea id="sugerencia-menu" name="sugerencia-menu" rows="3"></textarea>
                            </div>
-                           
+
                            <button type="submit">Enviar mi opinión</button>
+                           <button type="reset">Limpiar</button>
                          </form>
                        </div>
                        
                        <div class="imagen">
-                         <img src="8.jpeg" alt="Tu opinión" class="seccion-img" style="width: 130px;">
+                         <img src="8.jpeg" alt="Tu opinión" class="seccion-img" style="width: 150px; margin-left: 10px; height: 150px;">
                          <div class="volver"><strong><a href="#Inicio">Regresar al inicio</a></strong></div>
                        </div>
                      </section>
